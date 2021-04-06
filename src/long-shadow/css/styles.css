@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #8caced, #2750a2); }
+  .list__item--text {
+    font-size: 100px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    transition: text-shadow .2s; }
+    .list__item--text:hover {
+      text-shadow: 1px 1px #142955, 2px 2px #142955, 3px 3px #142955, 4px 4px #142955, 5px 5px #142955, 6px 6px #142955, 7px 7px #142955, 8px 8px #142955, 9px 9px #142955, 10px 10px #142955, 11px 11px #142955, 12px 12px #142955, 13px 13px #142955, 14px 14px #142955, 15px 15px #142955, 16px 16px #142955, 17px 17px #142955, 18px 18px #142955, 19px 19px #142955, 20px 20px #142955, 21px 21px #142955, 22px 22px #142955, 23px 23px #142955, 24px 24px #142955, 25px 25px #142955, 26px 26px #142955, 27px 27px #142955, 28px 28px #142955, 29px 29px #142955, 30px 30px #142955, 31px 31px #142955, 32px 32px #142955, 33px 33px #142955, 34px 34px #142955, 35px 35px #142955, 36px 36px #142955, 37px 37px #142955, 38px 38px #142955, 39px 39px #142955, 40px 40px #142955, 41px 41px #142955, 42px 42px #142955, 43px 43px #142955, 44px 44px #142955, 45px 45px #142955, 46px 46px #142955, 47px 47px #142955, 48px 48px #142955, 49px 49px #142955, 50px 50px #142955; }
+  .list__item--circle, .list__item--square {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    transition: box-shadow .2s; }
+    .list__item--circle:hover, .list__item--square:hover {
+      box-shadow: 1px 1px #142955, 2px 2px #142955, 3px 3px #142955, 4px 4px #142955, 5px 5px #142955, 6px 6px #142955, 7px 7px #142955, 8px 8px #142955, 9px 9px #142955, 10px 10px #142955, 11px 11px #142955, 12px 12px #142955, 13px 13px #142955, 14px 14px #142955, 15px 15px #142955, 16px 16px #142955, 17px 17px #142955, 18px 18px #142955, 19px 19px #142955, 20px 20px #142955, 21px 21px #142955, 22px 22px #142955, 23px 23px #142955, 24px 24px #142955, 25px 25px #142955, 26px 26px #142955, 27px 27px #142955, 28px 28px #142955, 29px 29px #142955, 30px 30px #142955, 31px 31px #142955, 32px 32px #142955, 33px 33px #142955, 34px 34px #142955, 35px 35px #142955, 36px 36px #142955, 37px 37px #142955, 38px 38px #142955, 39px 39px #142955, 40px 40px #142955, 41px 41px #142955, 42px 42px #142955, 43px 43px #142955, 44px 44px #142955, 45px 45px #142955, 46px 46px #142955, 47px 47px #142955, 48px 48px #142955, 49px 49px #142955, 50px 50px #142955; }
+  .list__item--circle {
+    border-radius: 100%; }

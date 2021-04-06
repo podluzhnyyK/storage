@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+.hover-slider-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .hover-slider-nav__item {
+    padding: 1vh;
+    font-size: 8vh;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: .2s; }
+    .hover-slider-nav__item--active {
+      color: white; }
+
+.hover-slider {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  list-style: none;
+  background-color: #000; }
+  .hover-slider__item {
+    position: absolute;
+    top: -2vh;
+    left: -2vw;
+    width: 104vw;
+    height: 104vh;
+    opacity: 0;
+    transition: .3s linear;
+    transform: translateY(-2vh); }
+    .hover-slider__item-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+    .hover-slider__item--active {
+      opacity: 1;
+      transform: translateY(0); }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Multi-select</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <button>Клац 1</button>
+
+        <div class="select" data-values="[]">
+            <div class="select-trigger" role="button" aria-pressed="false" tabindex="0">
+                <div class="select-trigger__empty">Выберите значение</div>
+            </div>
+            <ul class="select-list" role="list" aria-expanded="false">
+                <li class="select-list__item" role="listitem" data-value="1" tabindex="1">1</li>
+                <li class="select-list__item" role="listitem" data-value="2" tabindex="2">2</li>
+                <li class="select-list__item" role="listitem" data-value="3" tabindex="3">3</li>
+                <li class="select-list__item" role="listitem" data-value="4" tabindex="4">4</li>
+                <li class="select-list__item" role="listitem" data-value="5" tabindex="5">5</li>
+            </ul>
+        </div>
+
+        <button>Клац 2</button>
+
+        <div class="select" data-values="[]">
+            <div class="select-trigger" role="button" aria-pressed="false" tabindex="0">
+                <div class="select-trigger__empty">Выберите значение</div>
+            </div>
+            <ul class="select-list" role="list" aria-expanded="false">
+                <li class="select-list__item" role="listitem" data-value="1" tabindex="1">1</li>
+                <li class="select-list__item" role="listitem" data-value="2" tabindex="2">2</li>
+                <li class="select-list__item" role="listitem" data-value="3" tabindex="3">3</li>
+                <li class="select-list__item" role="listitem" data-value="4" tabindex="4">4</li>
+                <li class="select-list__item" role="listitem" data-value="5" tabindex="5">5</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

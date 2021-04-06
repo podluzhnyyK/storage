@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$base-font: 16;
+
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function rem($num) {
+    @return strip-unit($num) / $base-font * 1rem;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: rem(50px);
+    color: #fff;
+
+    &-1 { background-color: #343434; }
+    &-2 { background-color: #2f3061; }
+    &-3 { background-color: #0e34a0; }
+}
+
+.modal {
+    $parent: &;
+    $screen-height: 80vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, .2);
+    opacity: 0;
+    transition: .2s;
+
+    &--s #{$parent}__dialog { width: rem(300px); }
+    &--m #{$parent}__dialog { width: rem(600px); }
+    &--l #{$parent}__dialog { width: rem(1000px); }
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+
+        #{$parent}__dialog {
+            transform: translateY(0);
+        }
+    }
+
+    &--has-scroll {
+        #{$parent}__dialog-footer,
+        #{$parent}__dialog-header {
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 0 rem(8px) rgba(0, 0, 0, .4);
+        }
+    }
+
+    &__dialog {
+        display: flex;
+        flex-direction: column;
+        max-height: $screen-height;
+        overflow: hidden;
+        background-color: #fff;
+        border-radius: rem(8px);
+        transition: .2s;
+        transform: translateY(rem(-50px));
+
+        &-header,
+        &-body {
+            transition: .2s;
+        }
+
+        &-header,
+        &-body,
+        &-footer {
+            padding: rem(20px) rem(40px);
+        }
+
+        &-header {
+            display: flex;
+            align-items: center;
+
+            &-content {
+                flex-grow: 1;
+                font-size: rem(24px);
+            }
+
+            &-close {
+                display: flex;
+                align-items: center;
+
+                &-btn {
+                    padding: 0;
+                    margin: 0;
+                    font-size: rem(24px);
+                    line-height: rem(24px);
+                    cursor: pointer;
+                    background: none;
+                    border: 0;
+                }
+            }
+        }
+
+        &-body {
+            flex-grow: 1;
+            overflow: auto;
+        }
+    }
+
+    &--screen-height &__dialog {
+        height: $screen-height;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: rem(8px) rem(16px);
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem(14px);
+    line-height: rem(28px);
+    color: #354664;
+    cursor: pointer;
+    background: #ebedee;
+    border: 0;
+    border-radius: rem(4px);
+    transition: .2s;
+
+    &:hover {
+        background-color: darken(#ebedee, 10%);
+    }
+}
+
+.link {
+    color: #fff;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    max-width: 1000px;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+
+    &__triggers {
+        display: flex;
+        order: -1;
+
+        &-item {
+            flex-grow: 1;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+
+    &__content-item {
+        position: relative;
+        display: none;
+        padding: 20px;
+        background-color: #ccc;
+
+        &:target {
+            display: block;
+        }
+    }
+
+    #tab-1:target ~ &__triggers > &__triggers-item[href='#tab-1'],
+    #tab-2:target ~ &__triggers > &__triggers-item[href='#tab-2'] {
+        background-color: #ccc;
+    }
+}

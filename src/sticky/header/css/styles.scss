@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-content {
+    background-color: green;
+}
+
+.nav-fixed {
+    .nav-content {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+header {
+    height: 100px;
+    background-color: red;
+}
+
+main {
+    height: 1000px;
+    background-color: blue;
+}

@@ -1,0 +1,131 @@
+@import 'normalize.scss';
+
+// Variables
+$color-white: #fff;
+$color-gray: #282828;
+
+$font-size-md: 20px;
+$font-size-lg: 36px;
+$font-size-xl: 48px;
+
+// Mixins
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+// Section Common
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    @include roboto;
+
+    color: $color-white;
+    background-color: $color-gray;
+}
+
+h1 {
+    padding: 0;
+    margin: 0 0 50px;
+    font-size: $font-size-lg;
+}
+
+h2 {
+    padding: 0;
+    margin: 50px 0 0;
+    font-size: $font-size-md;
+
+    span {
+        font-size: $font-size-lg;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.section-inner {
+    max-width: 800px;
+    padding: 60px 20px;
+    margin: 0 auto;
+}
+
+.form-group {
+    $parent: &;
+
+    & + & {
+        margin-top: 36px;
+    }
+
+    &--inline {
+        display: flex;
+
+        > #{$parent}__label {
+            padding-top: 9px;
+            margin-right: 20px;
+        }
+
+        & + & {
+            margin-top: 8px;
+        }
+    }
+
+    &--block {
+        > #{$parent}__label {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__label {
+        font-size: $font-size-md;
+        white-space: nowrap;
+    }
+
+    &__control {
+        display: flex;
+
+        &--row { flex-direction: row; }
+        &--col { flex-direction: column; }
+
+        &-input,
+        &-button {
+            @include roboto;
+
+            padding: 0;
+            margin: 0;
+            color: $color-white;
+            background: none;
+        }
+
+        &-input {
+            display: block;
+            width: 100%;
+            font-size: $font-size-lg;
+            font-weight: bold;
+            border-style: solid;
+            border-width: 0 0 1px 0;
+            border-bottom-color: $color-white;
+        }
+
+        &-button {
+            padding: 12px 20px;
+            font-size: $font-size-md;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            transition: .2s;
+
+            &:hover,
+            &--active {
+                border-color: $color-white;
+            }
+
+            & + & {
+                margin-left: 12px;
+            }
+        }
+    }
+}

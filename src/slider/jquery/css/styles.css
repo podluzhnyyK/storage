@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+.wrapper {
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: pink; }
+
+.track {
+  display: flex;
+  transition: .2s; }
+
+.item {
+  height: 100px; }
+  .item:nth-child(3n + 1) {
+    background-color: red; }
+  .item:nth-child(3n + 2) {
+    background-color: green; }
+  .item:nth-child(3n + 3) {
+    background-color: blue; }
+
+.btn-container {
+  text-align: center; }

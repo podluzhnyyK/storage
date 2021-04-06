@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin long-shadow($type, $hex: #000, $size: 50) {
+    $ts: ();
+
+    @for $i from 1 through $size {
+        $ts: $ts, ($i * 1px) ($i * 1px) $hex;
+    }
+
+    #{$type}-shadow: $ts;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #8caced, #2750a2);
+
+    &__item {
+        &--text {
+            font-size: 100px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            transition: text-shadow .2s;
+
+            &:hover {
+                @include long-shadow('text', #142955, 50);
+            }
+        }
+
+        &--circle,
+        &--square {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            transition: box-shadow .2s;
+
+            &:hover {
+                @include long-shadow('box', #142955, 50);
+            }
+        }
+
+        &--circle {
+            border-radius: 100%;
+        }
+    }
+}

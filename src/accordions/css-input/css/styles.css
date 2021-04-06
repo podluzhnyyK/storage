@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+.wrapper {
+  max-width: 1000px;
+  padding: 20px 0;
+  margin: 0 auto; }
+
+.accordion__item {
+  position: relative;
+  margin-bottom: 10px; }
+
+.accordion__item-trigger {
+  display: block;
+  padding: 20px;
+  cursor: pointer;
+  border: 1px solid #ccc; }
+
+.accordion__item-content {
+  display: none;
+  padding: 20px;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 0 1px 1px; }
+
+.accordion__item-radio {
+  position: absolute;
+  opacity: 0; }
+
+.accordion__item-radio:checked ~ .accordion__item-content {
+  display: block; }

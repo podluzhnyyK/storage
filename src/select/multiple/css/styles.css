@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.wrapper {
+  max-width: 500px;
+  margin: 0 auto; }
+
+.select {
+  position: relative; }
+  .select:focus {
+    outline: 2px solid green; }
+  .select--active .select-list {
+    display: block; }
+  .select--active .select-trigger::before {
+    transform: translateY(-50%) rotate(-180deg); }
+  .select-trigger {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 1px solid #ccc; }
+    .select-trigger__badge {
+      padding: 2px 8px;
+      margin-right: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px; }
+      .select-trigger__badge span {
+        cursor: pointer; }
+    .select-trigger__empty {
+      padding: 3px 0; }
+    .select-trigger::before {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      content: '';
+      background: url(https://image.flaticon.com/icons/svg/25/25243.svg) no-repeat 50% 50%;
+      background-size: cover;
+      transition: .2s;
+      transform: translateY(-50%); }
+  .select-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #fff;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 0 1px 1px; }
+    .select-list__item {
+      padding: 20px; }
+      .select-list__item--selected {
+        color: #fff;
+        background-color: #3e8acc; }
+      .select-list__item:focus:not(.select-list__item--selected), .select-list__item:hover:not(.select-list__item--selected) {
+        background-color: #dcdcdc; }

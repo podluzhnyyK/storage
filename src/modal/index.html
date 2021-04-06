@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Modal</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <section class="section section-1">
+        <a href="#modal-1" class="js-modal-open link"><span>Open modal 1</span></a> / 
+        <a href="#modal-2" class="js-modal-open link">Open modal 2</a>
+    </section>
+    <section class="section section-2">2</section>
+    <section class="section section-3">3</section>
+    
+    <div class="modal modal--m modal--screen-height" id="modal-1">
+        <div class="modal__dialog">
+            <div class="modal__dialog-header">
+                <div class="modal__dialog-header-content">Modal header 1</div>
+                <div class="modal__dialog-header-close">
+                    <button class="js-modal-close modal__dialog-header-close-btn"><span>&times;</span></button>
+                </div>
+            </div>
+            <div class="modal__dialog-body">
+                <div>
+                    modal__dialog-body
+                    <button id="add-content">Add Content</button>
+                </div>
+            </div>
+            <div class="modal__dialog-footer">
+                <button class="js-modal-close button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal--l" id="modal-2">
+        <div class="modal__dialog">
+            <div class="modal__dialog-header">
+                Modal header 2
+            </div>
+            <div class="modal__dialog-body">
+                modal__dialog-body
+            </div>
+            <div class="modal__dialog-footer">
+                <button class="js-modal-close button">Close</button>
+            </div>
+        </div>
+    </div>
+      
+    <script src="js/scripts.js"></script>
+</body>
+</html>

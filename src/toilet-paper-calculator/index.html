@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Калькулятор туалетной бумаги</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+    <section class="section-outer">
+        <div class="section-inner">
+            <h1>Калькулятор туалетной бумаги</h1>
+
+            <div class="form-group form-group--block">
+                <div class="form-group__label">Длина рулона, м (средняя длина - 20 м)</div>
+                <div class="form-group__control">
+                    <input class="form-group__control-input" type="text" value="20" id="total-length" />
+                </div>
+            </div>
+
+            <div class="form-group form-group--block">
+                <div class="form-group__label">Метод подсчёта</div>
+                <div class="form-group__control form-group__control--row">
+                    <button data-type="length" class="form-group__control-button form-group__control-button--active">
+                        по длине
+                    </button>
+                    <button data-type="paper" class="form-group__control-button">
+                        по листочкам
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group form-group--block hidden" id="paper-length-group">
+                <div class="form-group__label">Длина листочка, см (средняя длина - 14 см)</div>
+                <div class="form-group__control">
+                    <input class="form-group__control-input" type="text" value="14" id="paper-length" />
+                </div>
+            </div>
+
+            <div class="form-group form-group--block">
+                <div class="form-group__label">Сколько человек дома</div>
+                <div class="form-group__control">
+                    <input class="form-group__control-input" type="text" value="1" id="users-count" />
+                </div>
+            </div>
+
+            <div class="form-group form-group--block">
+                <div class="form-group__label">Использовано в день</div>
+                <div class="form-group__control form-group__control--col" id="users-list"></div>
+            </div>
+
+            <h2>Хватит на <span id="days">10</span> дней</h2>
+        </div>
+    </section>
+            
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(61474459, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/61474459" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</body>
+</html>
